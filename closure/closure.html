@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var val = 'global';
+        function outer() {
+            var val = 'local';
+            function inner() {
+                return val;
+            }
+            return inner;
+        }
+        console.log(outer()())
+    </script>
+</head>
+<body>
+
+</body>
+</html>
